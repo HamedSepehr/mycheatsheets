@@ -1,6 +1,7 @@
 variable:
 VAR1="some string"
 VAR2="$VAR1"
+echo "VAR1"
 
 array:
 declare -a ARRAY1
