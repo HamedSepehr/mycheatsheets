@@ -1,5 +1,19 @@
-#variable
+variable:
 VAR1="some string"
 VAR2="$VAR1"
 
 array:
+declare -a ARRAY1
+ARRAY1=("1st string" "2nd string" ... "nth string")
+OR
+ARRAY1[0]="1st string"
+ARRAY1[1]="2nd string"
+echo ${ARRAY1[1]} #show only selected one
+echo ${ARRAY1[*]} #show all array data
+
+multi dimensional array:
+declare -a ARRAY1
+ARRAY1[0,0,0]=0
+ARRAY1[0,0,1]=1
+echo ${ARRAY1[0,0,1]} #show only selected one
+echo ${ARRAY1[*]} #show all array data
