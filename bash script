@@ -2,6 +2,7 @@ variable:
 VAR1="some string"
 VAR2="$VAR1"
 echo "VAR1"
+unset VAR1
 
 array:
 declare -a ARRAY1
@@ -18,3 +19,44 @@ ARRAY1[0,0,0]=0
 ARRAY1[0,0,1]=1
 echo ${ARRAY1[0,0,1]} #show only selected one
 echo ${ARRAY1[*]} #show all array data
+
+for loop:
+for (( i=a ; i<=b ; i++ )) OR for (( i=a ; i<=b ; i=i+2 )) #doesn't work in cron job
+do
+	command
+done
+for i in {1..10} OR {{1..10},{a..d}} OR for i in {"1st string","2nd string","3rd string"} #no space, no double quotation
+do
+	command
+done
+for i in ls *
+do
+	command
+done
+
+math:
+a=$((a+1))
+a=$((a+b))
+a=$((a-b))
+a=$((a*b))
+a=$((a/b))
+c=$((a%b))
+
+comparison:
+== -> -eq
+!= -> -ne
+> -> -gt
+>= -> -ge
+< -> -lt
+<= -> -le
+source: http://tldp.org/LDP/abs/html/comparison-ops.html
+
+while loop:
+while (( a <= b ))  #doesn't work in cron job
+do
+	command
+done
+while [ "$a" -le "$b" ]
+do
+  command
+done
