@@ -83,3 +83,27 @@ while [ "$a" -le "$b" ]
 do
   command
 done
+
+------------------------------------------------
+
+if:
+
+if (( a > b )) #doesn't work in cron job
+then
+	command 
+fi
+
+if [ "$a" -le "$b" ]
+then
+  command
+fi
+
+if [ "$a" -lt "$b" ]
+then
+	command
+elif [ "$a" -gt "$b" ] 
+then
+	command
+else
+	commands
+fi
