@@ -4,6 +4,8 @@ VAR2="$VAR1"
 echo "VAR1"
 unset VAR1
 
+------------------------------------------------
+
 array:
 declare -a ARRAY1
 ARRAY1=("1st string" "2nd string" ... "nth string")
@@ -12,6 +14,8 @@ ARRAY1[0]="1st string"
 ARRAY1[1]="2nd string"
 echo ${ARRAY1[1]} #show only selected one
 echo ${ARRAY1[*]} #show all array data
+
+------------------------------------------------
 
 multi dimensional array:
 declare -a ARRAY1
