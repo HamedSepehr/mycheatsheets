@@ -112,7 +112,7 @@ fi
 
 Just some commands I use alot:
 
- sed -r 's/.{n}$//' #remove last n character
- sed -r 's/^.{n}//' #remove first n character
- grep -o -P "REGEX" #search using regex using perl module with support of ? (lazy regex)
- curl -L "$URL" #get web page source, -L is for redirect support
+sed -r 's/.{n}$//' #remove last n character
+sed -r 's/^.{n}//' #remove first n character
+grep -o -P "REGEX" #search using regex using perl module with support of ? (lazy regex)
+curl -L "$URL" #get web page source, -L is for redirect support
