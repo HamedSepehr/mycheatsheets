@@ -62,7 +62,7 @@ c=$((a%b))
 comparison:
 
 == -> -eq
-!= -> -ne
+!= -> -ne #for string cpmpare use !=
 > -> -gt
 >= -> -ge
 < -> -lt
