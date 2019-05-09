@@ -1,0 +1,47 @@
+#input, string by default
+name = input("what's your name? ")
+age = int(input('how old are you? '))
+multi_line = '''first line
+second line'''
+
+#variabel
+price = 10
+name = "hamed sepehr"
+array = ["jane","sarah","dave"]
+
+#print string/variable
+print("it's me")
+print(variable * 10) #can print multiple times
+print("hi " + name)
+print(f"some {variable1} strange {variable2}")
+print(type(variable)) #print variable class
+
+#arrays (also strings)
+index starts from 0
+last variable index is -1
+print(array_name[0:3]) #print first 3, doesn't print second entered index data
+
+#string methods
+print(len(variable)) #print variable length
+variable = variable.upper() #all characters changes to upper case
+variable = variable.lower() #all characters changes to lower case
+print(variable.find(M)) #print index of 'M' in the string, returns -1 if found nothing, can search for string
+print(variable.replace('a','b'))
+print('string' in variable) #print True if exist, Flase if not, case sensitive
+print(variable.title()) #fisr letter of every word will become upper case
+
+#arithmetic
++
+-
+*
+/ #returns float
+// #returns int
+%
+** #power
+
+#math
+import math
+round(variable) # 2.9 -> 3
+abs(variable)
+math.ceil(variable) # 2.9 -> 3
+math.floor(variable) # 2.9 -> 2
