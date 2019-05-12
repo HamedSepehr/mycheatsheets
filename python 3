@@ -73,3 +73,5 @@ array.sort()
 array.reverse()
 array2 = array1.copy() 
 
+#tuple, immutable array
+numbers = (1,2,3)
