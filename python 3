@@ -8,6 +8,7 @@ second line'''
 price = 10
 name = "hamed sepehr"
 array = ["jane","sarah","dave"]
+matrix=[["00","01","02"],[10,11,12],[20,21,22]] #can be in multi line
 
 #print string/variable
 print("it's me")
@@ -15,6 +16,10 @@ print(variable * 10) #can print multiple times
 print("hi " + name)
 print(f"some {variable1} strange {variable2}")
 print(type(variable)) #print variable class
+print(matrix[2][1])
+for row in matrix:
+        for item in row:
+                print(item)
 
 #arrays (also strings)
 index starts from 0
@@ -27,7 +32,7 @@ variable = variable.upper() #all characters changes to upper case
 variable = variable.lower() #all characters changes to lower case
 print(variable.find(M)) #print index of 'M' in the string, returns -1 if found nothing, can search for string
 print(variable.replace('a','b'))
-print('string' in variable) #print True if exist, Flase if not, case sensitive
+print('string' in variable(or array)) #print True if exist, Flase if not, case sensitive
 print(variable.title()) #fisr letter of every word will become upper case
 
 #arithmetic
@@ -38,10 +43,33 @@ print(variable.title()) #fisr letter of every word will become upper case
 // #returns int
 %
 ** #power
+variable += 'x' #add x at the end of the variable
 
 #math
 import math
-round(variable) # 2.9 -> 3
-abs(variable)
 math.ceil(variable) # 2.9 -> 3
 math.floor(variable) # 2.9 -> 2
+round(variable) # 2.9 -> 3
+abs(variable)
+
+#for loop
+for i in "string":
+	print(i) #prints string char by char
+for i in [1,2,3,4]:
+for i in array_name:
+for i in range (5): #0..4
+for i in range (5,10): #5..9
+for i in range (5,10,2): #5,7,9
+
+#list methods
+array.append("hi") OR array.append(19) #add new data at the end of the list
+array.insert(2,4) #add 4 at index 2
+array.remove(1) #remove first occurrence of value
+array.clear() #clear array
+array.pop() #removes last item of the array
+array.index(5) #show first index of the value
+array.count(2) #shows count of 2 in array
+array.sort()
+array.reverse()
+array2 = array1.copy() 
+
