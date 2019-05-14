@@ -34,6 +34,7 @@ print(variable.find(M)) #print index of 'M' in the string, returns -1 if found n
 print(variable.replace('a','b'))
 print('string' in variable(or array)) #print True if exist, Flase if not, case sensitive
 print(variable.title()) #fisr letter of every word will become upper case
+words=string.split(' ') #split string by ' ' and store at as an array in words
 
 #arithmetic
 +
@@ -87,3 +88,8 @@ print(customer["name"]) #returns ERROR if name is not defines
 print(customer.get("location")) #returns NONE if location is not defined
 print(customer.get("location","NY")) #makes NY the default value
 
+#function
+def func_name(): #need 2 empty line after making it, call by func_name()
+	print("")
+def func_name(name,age): #call: func_name("jane",20)
+	print(f'{name} is {age}') 
