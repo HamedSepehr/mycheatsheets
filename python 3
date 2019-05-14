@@ -68,10 +68,22 @@ array.remove(1) #remove first occurrence of value
 array.clear() #clear array
 array.pop() #removes last item of the array
 array.index(5) #show first index of the value
-array.count(2) #shows count of 2 in array
+array.count(2) #shows number of 2 in array
 array.sort()
 array.reverse()
 array2 = array1.copy() 
 
 #tuple, immutable array
 numbers = (1,2,3)
+x,y,z=numbers #aorks in both tuples and arrays
+
+#dictionary
+customer={"name":"jack",
+"age":20,
+"verified":true}
+customer["birthdate"]=1968
+customer["name"]="jane"
+print(customer["name"]) #returns ERROR if name is not defines
+print(customer.get("location")) #returns NONE if location is not defined
+print(customer.get("location","NY")) #makes NY the default value
+
