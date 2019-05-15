@@ -89,7 +89,18 @@ print(customer.get("location")) #returns NONE if location is not defined
 print(customer.get("location","NY")) #makes NY the default value
 
 #function
+#default return of a function is Nonde
 def func_name(): #need 2 empty line after making it, call by func_name()
 	print("")
 def func_name(name,age): #call: func_name("jane",20)
 	print(f'{name} is {age}') 
+def func_name(name,age): #call: func_name(age="20",name="jane"), order doesn't matter
+	return f'''hi, {name} is {age}'''
+
+#handele exception
+try:
+	code
+except <exception type>:
+	what to do
+except <exception type>:
+	what to do
