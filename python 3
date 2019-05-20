@@ -104,3 +104,19 @@ except <exception type>:
 	what to do
 except <exception type>:
 	what to do
+
+#modules
+save all functions in a file with .py extention.
+at the beginning of code add: import file (witout .py extention). usage: module.function(). it imports all functions.
+at the beginning of code add: from module_name import function. usage: function(). onlly import specified function.
+
+#packages
+create a folder, make "__init__.py" in it. put your module files in it. now it's a package and use "import" to add functions.
+
+#random number:
+import random
+random.random() #generate float number from 0 to 1
+random.randint(10,20) #random number from 10 to 20, including 10 and 20
+random.choice(array_name) #pick random item from array
+
+
