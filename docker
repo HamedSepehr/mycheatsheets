@@ -1,0 +1,20 @@
+#list all containers
+docker ps -a
+
+#list only running containers
+docker ps
+
+#run image
+docker run [options] image_name:tag
+-d: run in background
+--name: fiendly name
+-p: port mapping, host_port:container_port, ip:host_port:container_port, port (map to random port on host)
+-t: allocate pseudo-tty
+-i: interactive
+-v: volume mapping, /path/to/host:/path/to/container
+
+#attach to container
+docker attach <ID or name>
+
+#start/stop container
+docker stop|start <ID or name>
