@@ -4,8 +4,22 @@ docker ps -a
 #list only running containers
 docker ps
 
+#search for image
+docker search image_name
+
+#more info about running container
+docker inspect <ID or name>
+
+#logs
+docker logs <ID or name>
+
+#show mapped ports
+docker port <ID or name> #show all mapped port
+docker port <ID or name> PORT_NO #show which host port is mapped to PORT_NO
+
 #run image
-docker run [options] image_name:tag
+docker run [options] image_name:tag [command]
+[command]: run command inside container and show the output
 -d: run in background
 --name: fiendly name
 -p: port mapping, host_port:container_port, ip:host_port:container_port, port (map to random port on host)
@@ -18,3 +32,11 @@ docker attach <ID or name>
 
 #start/stop container
 docker stop|start <ID or name>
+
+
+#Dockerfile, somehow a recipe to modify container as needed
+FROM nginx:alpine #source image to work on
+COPY . /usr/share/nginx/html #copy files to container
+
+#buld modified image
+docker build -t <name>:<tag> . #run in the same direcory as Dockerfile
