@@ -21,6 +21,7 @@ docker port <ID or name> PORT_NO #show which host port is mapped to PORT_NO
 docker run [options] image_name:tag [command]
 [command]: run command inside container and show the output
 -d: run in background
+-e: environment variable VAR=VAL
 --name: fiendly name
 -p: port mapping, host_port:container_port, ip:host_port:container_port, port (map to random port on host)
 -t: allocate pseudo-tty
@@ -33,10 +34,14 @@ docker attach <ID or name>
 #start/stop container
 docker stop|start <ID or name>
 
-
 #Dockerfile, somehow a recipe to modify container as needed
 FROM nginx:alpine #source image to work on
 COPY . /usr/share/nginx/html #copy files to container
+CMD ["nginx", "-g", "daemon off;"] #defines the default command to run when a container is launched, ["cmd", "-a", "arga value", "-b", "argb-value"]
+RUN <command> #we can execute commands as if they're running from a command shell
+WORKDIR <directory> #define a working directory
+EXPOSE 80 #make port 80 accesible only from other containers and not to public
 
 #buld modified image
 docker build -t <name>:<tag> . #run in the same direcory as Dockerfile
+--no-cache=true
