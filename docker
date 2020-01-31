@@ -41,7 +41,9 @@ CMD ["nginx", "-g", "daemon off;"] #defines the default command to run when a co
 RUN <command> #we can execute commands as if they're running from a command shell
 WORKDIR <directory> #define a working directory
 EXPOSE 80 #make port 80 accesible only from other containers and not to public
+ONBUILD RUN|COPY|... (?)
+.dockerignore #file that defines whix files/folders must be ignored in COPY|ADD. supports regex and file/folder name
 
 #buld modified image
 docker build -t <name>:<tag> . #run in the same direcory as Dockerfile
---no-cache=true
+--no-cache=true (?)
