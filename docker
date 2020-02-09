@@ -47,3 +47,7 @@ ONBUILD RUN|COPY|... (?)
 #buld modified image
 docker build -t <name>:<tag> . #run in the same direcory as Dockerfile
 --no-cache=true (?)
+
+#move container
+docker export <container name or ID> > dataContainer.tar
+docker import dataContainer.tar
