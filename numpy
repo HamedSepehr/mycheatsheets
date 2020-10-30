@@ -23,3 +23,6 @@ a.size #output: 3
 #get item size,  size in bytes of each element of the array
 a.itemsize #output: 1
 b.itemsize #output: 8
+
+#size of array in byte (a.itemsize * a.size)
+a.nbytes
