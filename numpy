@@ -59,3 +59,12 @@ np.full(a.shape,99) #create new matrix with the same shape as a
 #create identity matrix (square matrix)
 a = np.identity(3)
 
+#repeat array
+arr = np.array([1,2,3])
+r1 = np.repeat(arr,3,axis=0)
+print(r1) #output: [[1 2 3]
+                    [1 2 3]
+                    [1 2 3]]
+                    
+#copy array
+b = a.copy()
