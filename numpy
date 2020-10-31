@@ -55,3 +55,7 @@ a = np.ones((2,3))
 #create mtrix, all indexes are given number
 np.full((2,2),99,dtype='float') #2 by 2 matrix, all indexes are 99. dtype is optional
 np.full(a.shape,99) #create new matrix with the same shape as a
+
+#create identity matrix (square matrix)
+a = np.identity(3)
+
