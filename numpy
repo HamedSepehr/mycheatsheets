@@ -1,5 +1,7 @@
 import numpy as np
 
+#in numpy, column-wise using axis=0 and row-wise using axis=1
+
 a = np.array([1,2,3])
 a = np.array([1,2,3], dtype='int8')
 b = np.array([[9.1,8.2,7.3],[1.9,2.8,3.7]])
@@ -108,3 +110,8 @@ after = before.reshape((8,1)) #change it to 1 dimention array
 #load data from file
 filedata = np.genfromtxt('data.txt', delimiter=',') #store numerical data as float
 filedata = filedata.astype('int32') #convert stored numerical data to int32
+
+#boolean masking and advanced indexing
+filedata > 50 #returns boolean matrix of true or false
+filedata[filedata > 50] #returns an array, elements are the ones bigger than 50
+datafile2 = np.array([datafile > 4])
