@@ -58,6 +58,9 @@ np.full(a.shape,99) #create new matrix with the same shape as a
 
 #create identity matrix (square matrix)
 a = np.identity(3)
+print(a) #output: [[1. 0. 0.]
+                   [0. 1. 0.]
+                   [0. 0. 1.]]
 
 #repeat array
 arr = np.array([1,2,3])
@@ -68,3 +71,40 @@ print(r1) #output: [[1 2 3]
                     
 #copy array
 b = a.copy()
+
+#mathematics
+a = np.array([1,2,3,4])
+b = a +,-,*,/,** 5 #do simple math on all items in a
+
+a = np.array([1,2,3,4])
+b = np.array([5,6,7,8])
+c = a + b
+
+#get sin
+np.sin(a)
+
+#matrix multiply
+a = np.ones((2,3))
+b = np.full((3,2),2)
+c = np.matmul(a,b)
+print(c) #output: [[6. 6.]
+                   [6. 6.]]
+                   
+#determinant of matrix
+c = np.identity(3)
+d = np.linalg.det(c)
+print(d) #output: 1
+
+#min and max of array
+stats = np.array([[1,2,3],[4,5,6]])
+np.min(stats)
+np.max(stats)
+n.sum(stats) #sum of all the elements in the matrix
+
+#reorganizing arrays
+before = np.array([[1,2,3,4],[5,6,7,8]])
+after = before.reshape((8,1)) #change it to 1 dimention array
+
+#load data from file
+filedata = np.genfromtxt('data.txt', delimiter=',') #store numerical data as float
+filedata = filedata.astype('int32') #convert stored numerical data to int32
