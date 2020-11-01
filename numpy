@@ -114,4 +114,5 @@ filedata = filedata.astype('int32') #convert stored numerical data to int32
 #boolean masking and advanced indexing
 filedata > 50 #returns boolean matrix of true or false
 filedata[filedata > 50] #returns an array, elements are the ones bigger than 50
-datafile2 = np.array([datafile > 4])
+datafile2 = np.array((datafile > 4), axis=0)
+datafile2 = np.array((datafile > 4) & (datafile < 8)) # ~ means not
