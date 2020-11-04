@@ -1,0 +1,9 @@
+import pandas as pd
+
+#read data from csv file
+df = pd.read_csv('/path/to/file.csv')
+
+#print data
+print(df)
+print(df.head(3)) #default is 5
+print(df.tail(3)) #default is 5
