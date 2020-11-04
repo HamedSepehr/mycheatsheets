@@ -3,7 +3,31 @@ import pandas as pd
 #read data from csv file
 df = pd.read_csv('/path/to/file.csv')
 
+#read data from excel file
+df = pd.read_excel('/path/to/file.xlsx')
+
+#read data from tab seprated text file
+df = pd.read_csv('/path/to/file.txt',delimiter='\t')
+
 #print data
 print(df)
 print(df.head(3)) #default is 5
 print(df.tail(3)) #default is 5
+
+#print headers
+print(df.columns)
+
+#print specific column
+print(df['column_header']) #all rows
+print(df['column_header'][1:5]) #given rows
+
+#print multiple columns
+print(df[['column_header_1','column_header_3','column_header_2']]) #all rows
+print(df[['column_header_1','column_header_3','column_header_2']][0:5]) #given rows
+
+#print row
+print(df.iloc[1])
+print(df.iloc[1:4])
+
+#print specific location
+print(df.iloc[2,4])
