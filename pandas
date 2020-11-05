@@ -1,5 +1,7 @@
 import pandas as pd
 
+#in pandas, column-wise using axis=0 and row-wise using axis=1
+
 #read data from csv file
 df = pd.read_csv('/path/to/file.csv')
 
@@ -42,3 +44,13 @@ df.loc[df['column-header'] == "something"]
 #sort
 df.sort_values('column1', ascending=False) #only print sorted data based on column1 and does not change df content
 df.sort_values(['column_header_1','column_header_2'], ascending=[1,0])
+
+#changing data
+df['new_column'] = 0 #adds new column with header new_column and makes its xontent 0 on all rows
+df['new_column'] = df['column1'] + df['column2']
+df['new_column'] = df.iloc[:,1:4].sum(axis=1)
+df = df.drop(columns=['column_header1]) #remove column
+df = df[['column_header_3','column_header_1','column_header_5']]
+
+cols = list(df.columns) #store all headers as list in cols variable
+df = [cols[0:3] + [cols[-1]] + cols[4:8]]
