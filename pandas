@@ -31,3 +31,14 @@ print(df.iloc[1:4])
 
 #print specific location
 print(df.iloc[2,4])
+
+#iterate through rows
+for index, row in df.iterrows():
+  print(index, row) #all columns
+  print(index, row['column-header_1']) #specific column
+
+df.loc[df['column-header'] == "something"]
+
+#sort
+df.sort_values('column1', ascending=False) #only print sorted data based on column1 and does not change df content
+df.sort_values(['column_header_1','column_header_2'], ascending=[1,0])
