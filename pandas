@@ -55,8 +55,19 @@ df = df[['column_header_3','column_header_1','column_header_5']]
 cols = list(df.columns) #store all headers as list in cols variable
 df = [cols[0:3] + [cols[-1]] + cols[4:8]] #rearrange columns 
 
+df.iat[0,1] = "hi" #change specific cell data
+
 #storing data
 df.to_csv('/path/to/file.csv') #adds indx column to data frame and csv file
 df.to_csv('/path/to/file.csv', index=False) #without added index column
 df.to_excel('/path/to/file.xlsx', index=False)
 df.to_csv('/path/to/file.txt', index=False, sep='\t') #text file sprated by tab
+
+#filtering data
+df.loc[df['column_header_1'] == 'grass'] #print rows that have grass in column_header_1
+df.loc[(df['column_header_1'] == 'grass') & (df['column_header_3'] == 'poison')]
+df.loc[(df['column_header_1'] == 'grass') | (df['column_header_3'] == 'poison')]
+df.loc[df['column_header_1'] > 80]
+df.loc[df['column_header'].str.contains('mega')] #print rows that contains mega in column-header, accepts regex
+df.loc[~df['column_header'].str.contains('mega')] #like previos one but in reverse
+new_df = new_df.reset_index(drop=True)
