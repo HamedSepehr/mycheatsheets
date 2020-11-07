@@ -53,4 +53,10 @@ df = df.drop(columns=['column_header1]) #remove column
 df = df[['column_header_3','column_header_1','column_header_5']]
 
 cols = list(df.columns) #store all headers as list in cols variable
-df = [cols[0:3] + [cols[-1]] + cols[4:8]]
+df = [cols[0:3] + [cols[-1]] + cols[4:8]] #rearrange columns 
+
+#storing data
+df.to_csv('/path/to/file.csv') #adds indx column to data frame and csv file
+df.to_csv('/path/to/file.csv', index=False) #without added index column
+df.to_excel('/path/to/file.xlsx', index=False)
+df.to_csv('/path/to/file.txt', index=False, sep='\t') #text file sprated by tab
