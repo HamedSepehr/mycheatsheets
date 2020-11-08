@@ -71,3 +71,6 @@ df.loc[df['column_header_1'] > 80]
 df.loc[df['column_header'].str.contains('mega')] #print rows that contains mega in column-header, accepts regex
 df.loc[~df['column_header'].str.contains('mega')] #like previos one but in reverse
 new_df = new_df.reset_index(drop=True)
+
+#conditional changes
+df.loc[df['column_header'] == 'Fire', 'column_header' ] = 'Flamer' #in column_header replace Fire with Flamer, second column_header can be another header label
