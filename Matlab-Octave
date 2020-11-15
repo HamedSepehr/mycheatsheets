@@ -164,5 +164,25 @@ sqrt(9)
 
 hist(variable,10) %graphical histogram, 10 for more buckets
 
+size(A) %returns number of rows and columns of a matrix in a 1 by 2 mtatrix
+size(A,1) %number of rows
+size(A,2) %number of columns
+length(A) %print longest size of a matrix
 
-hel sqrt
+load 'file_name' %read file data
+
+who %list all variables
+whos %list all variables with details
+clear variable_name %remove variable and its content
+
+save haello.mat v; %saves variable v in hellot.mat file
+save haello.txt v -ascii; %saves variable v in hellot.txt file
+
+A(3,2) %print given position
+A(:,2) %print 2nd column
+A = [A, [100; 102; 102]] %append new column
+A(:) %convert matrix A to vector
+C = [A B] %concatinate A and B into C
+C = [A; B]
+
+help sqrt
