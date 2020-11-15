@@ -133,3 +133,36 @@ A_inv = inv(A)
 
 % What is A^(-1)*A? 
 A_invA = inv(A)*A
+
+
+
+1 == (3-2) %returns truw
+1 ~= (3-2) %returns false
+1 && 0 %logical and
+1 || 0 %logical or
+xor(1,0)
+
+%declare variable
+a = 3
+a = 3;
+a = 'hello world'
+a = (4>=3)
+a = pi
+disp(a)
+disp(sprintf('2 decimals: %0.2f', a)) %print float number with only 2 decimals
+
+format long
+format short
+
+ones(2,3) %generates 2 by 3, all 1 matrix
+c = 2*ones(2,3)
+zeros(2,3)
+rand(2,3)
+eye(4) %4 by 4 identity matrix
+
+sqrt(9)
+
+hist(variable,10) %graphical histogram, 10 for more buckets
+
+
+hel sqrt
