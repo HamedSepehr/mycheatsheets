@@ -184,5 +184,21 @@ A = [A, [100; 102; 102]] %append new column
 A(:) %convert matrix A to vector
 C = [A B] %concatinate A and B into C
 C = [A; B]
+A .* B %A and B are matrixes, this is element wise
+log(A)
+abs(A)
+max(A) %for vector
+max(max(A)) %for matrix
+max(A,[],1) %column wise max
+max(A,[],2) %row wise max
+[val, ind] = max(A) %svae maximum number and its index
+
+find(A < 3) %show index of the element which are smaller than 3
+[r, c] = find(A < 3) %store position in r (row) and c (column) variables
+
+sum(A) %sum of all the elements in A
+prod(A) %* of all elements
+
+
 
 help sqrt
