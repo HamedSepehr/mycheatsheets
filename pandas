@@ -2,6 +2,10 @@ import pandas as pd
 
 #in pandas, column-wise using axis=0 and row-wise using axis=1
 
+#create dataframe
+data = [['tom', 10], ['nick', 15], ['juli', 14]] 
+df = pd.DataFrame(data, columns = ['Name', 'Age'])
+
 #read data from csv file
 df = pd.read_csv('/path/to/file.csv')
 
