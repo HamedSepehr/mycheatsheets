@@ -117,3 +117,4 @@ sed -r 's/^.{n}//' #remove first n character
 grep -o -P "REGEX" #search using regex using perl module with support of ? (lazy regex)
 curl -L "$URL" #get web page source, -L is for redirect support
 awk -F":" '{print $n}' #print nth column seprated by :
+sed "${n}q;d" file.txt #read nth line of a file, n is variable
